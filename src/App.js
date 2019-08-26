@@ -10,9 +10,9 @@ const styles = {
 class App extends Component {
   state = {
     color: "black",
-    fontWeight: "normal",
-    fontStyle: "null",
-    textDecorationLine: "null"
+    fontWeight: false,
+    fontStyle: false,
+    textDecorationLine: false
   };
 
   setColor = color => {
@@ -21,22 +21,22 @@ class App extends Component {
 
   setStyle = style => {
     if (style === "bold") {
-      if (this.state.fontWeight === "normal") {
+      if (this.state.fontWeight === false) {
         this.setState({ fontWeight: "bold" });
       } else {
-        this.setState({ fontWeight: "normal" });
+        this.setState({ fontWeight: false });
       }
     } else if (style === "italic") {
-      if (this.state.fontStyle === "normal") {
+      if (this.state.fontStyle === false) {
         this.setState({ fontStyle: "italic" });
       } else {
-        this.setState({ fontStyle: "normal" });
+        this.setState({ fontStyle: false });
       }
     } else if (style === "underline") {
-      if (this.state.textDecorationLine === "normal") {
+      if (this.state.textDecorationLine === false) {
         this.setState({ textDecorationLine: "underline" });
       } else {
-        this.setState({ textDecorationLine: "normal" });
+        this.setState({ textDecorationLine: false });
       }
     }
   };
